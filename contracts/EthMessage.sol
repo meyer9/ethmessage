@@ -33,6 +33,9 @@ contract EthMessage is Ownable {
     }
 
     function putMessage(string messageToPut) public requiresPayment payable {
+        if (bytes(messageToPut).length > 255) {
+            revert();
+        }
         message = messageToPut;
     }
 
