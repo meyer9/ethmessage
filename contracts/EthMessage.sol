@@ -1,4 +1,4 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.15;
 
 import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
@@ -37,6 +37,6 @@ contract EthMessage is Ownable {
     }
 
     function () {
-        throw;
+        revert();
     }
 }
